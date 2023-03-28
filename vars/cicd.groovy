@@ -18,3 +18,8 @@ def newTestDownload(repo1)
 {
   git "https://github.com/prasadcloud/${repo1}"
 }
+
+def newDelivery(jobname,ip,appname)
+{
+  sh "scp /var/lib/jenkins/workspace/${jobname}/webapp/target/webapp.war ubuntu@${ip}:/var/lib/tomcat9/webapps/${appname}.war"
+}
