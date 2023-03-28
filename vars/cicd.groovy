@@ -14,3 +14,7 @@ def new(jobname1)
 {
   sh 'java -jar  /var/lib/jenkins/workspace/${jobname1}/testing.jar'
 }
+def newTestDownload(repo1)
+{
+  git "https://github.com/prasadcloud/${repo1}"
+}
